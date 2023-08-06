@@ -1,5 +1,7 @@
-  describe('My First Test', () => {
+let config = Cypress.config()
+ describe('My First Test', () => {
     it('Take a look at our E-bikes', () => {
       cy.visit('https://www.stromerbike.com/')
     })
-  })
+  });
+  
