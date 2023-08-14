@@ -6,6 +6,6 @@
     "test_linux": "./node_modules/.bin/cypress run"
   },
   "devDependencies": {
-    "cypress": "^12.17.1"
+    "cypress": "^12.17.3"
   }
 }
