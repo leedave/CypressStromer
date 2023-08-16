@@ -1,65 +1,68 @@
 let config = Cypress.config()
-describe('Bike Configurator', () => {
+describe('Bike Configurator', function () {
 
   beforeEach('before each test', function () {
     cy.visit(`${config.baseUrl}`);
     cy.get('#popup-buttons')
       .should('be.visible')
       .click();
-    cy.wait(8000);
   });
 
-  it('Select language', () => {
-    cy.get('.flag es').contains('ES | EN')
+  //Select a language and country
+
+  it('Select language', function ()  {
+    cy.get('#block-multiswitcher-2')
       .should('be.visible')
-      .click({ force: true });
-  });
-
-  it('Language Settings Language', () => {
-    cy.get('.custom-js-dropdown-value custom-js-dropdown-language-value').contains('English')
+      .click();
+  
+    cy.get('#aos-locale-multi-switcher-form--2 .custom-js-dropdown.custom-js-dropdown-language')
       .should('be.visible')
-      .click({ force: true });
-  });
+      .click();
 
-  it('Language Settings Country', () => {
-    cy.get('.custom-js-dropdown-value custom-js-dropdown-country-value').contains('Spain')
+    cy.get('#aos-locale-multi-switcher-form--2 .custom-js-dropdown-option.custom-js-dropdown-language-option').contains('English')
       .should('be.visible')
-      .click({ force: true });
-  });
+      .click();
+      
+    cy.get('#aos-locale-multi-switcher-form--2 [cdata-selector-target="aos-multi-switcher-country-selector"]')
+      .should('be.visible')
+      .click();
 
-  it('Save', () => {
+    cy.get('#aos-locale-multi-switcher-form--2 .custom-js-dropdown-option.custom-js-dropdown-country-options').contains('USA')
+      .should('be.visible')
+      .click();
+
     cy.get('#edit-submit--2')
-      .should('be.visible')
-      .click({ force: true });
-  });
-
-  it('Your Stromer', () => {
-    cy.get('.menu-item menu-item--expanded a[href="https://www.stromerbike.com/en/configurator-model-select"]')
       .should('be.visible')
       .click();
   });
 
-  it('Select a bike ST5 ABS', () => {
-    cy.get('.field__item a[href="https://www.stromerbike.com/en/configurator?bike=st5a"]')
-      .contains('Configure the ST5 ABS')
+  //Select a E-bike
+
+  it('Your Stromer', function () {
+    cy.get('#block-menureferencesbycountry > :nth-child(2) > :nth-child(2) > :nth-child(1)')
       .should('be.visible')
       .click();
     cy.location().should(loc => {
-        expect(loc.pathname).to.equal('/en/configurator?bike=st5a');
+        expect(loc.pathname).to.equal('/en/configurator-model-select');
     });
-  });
+  
+    cy.get(':nth-child(1) > .paragraph--type--aospcc01 > .container > :nth-child(1) > .col-lg-12 > .grid-container > .row > :nth-child(2) > .str-custom-input-wrapper > .str-custom-input > .str-custom-input-inner > .str-custom-input-content > .aospci-content--links > .field > .field__item > .ghost-link')
+      .contains('Configure the ST5 ABS')
+      .should('be.visible')
+      .click();
+    cy.wait(8000);
+    
 
-  it('Configure your ST5', () => {
-    cy.get("select[name='Rahmengrösse'] span")
-      .select("L")
+
+    //Configure the bike
+  
+    cy.get('[for="Rahmengrösse_l0"]')
       .should('be.visible')
       .click();
-    cy.get("select[name='Federgabel'] span")
-      .select("With")
+    cy.get('[for="Federgabel_nf"]')
       .should('be.visible')
       .click();
-    cy.get("select[name='Sattelstütze'] span")
-      .select("Without")
+    cy.get('[for="Sattelstütze_sa"]')
       .should('be.visible')
       .click();
     cy.get('button')
