@@ -50,13 +50,13 @@ describe('Bike Configurator', function () {
       .contains('Configure the ST5 ABS')
       .should('be.visible')
       .click();
-    cy.wait(8000);
+    // cy.wait(8000);
     
 
 
     //Configure the bike
   
-    cy.get('[for="Rahmengrösse_l0"]')
+    cy.get('[for="Rahmengrösse_l0"]', { timeout: 20000 })
       .should('be.visible')
       .click();
     cy.get('[for="Federgabel_nf"]')
@@ -66,6 +66,20 @@ describe('Bike Configurator', function () {
       .should('be.visible')
       .click();
     cy.get('button')
+      .contains('Next step')
+      .should('be.visible')
+      .click();
+    cy.get('.invoiceFooter > .configuratorButton')
+      .contains('Next step')
+      .should('be.visible')
+      .click();
+    cy.get(':nth-child(3) > .extraCounter > .confInputIntPlusMinusContainer > .confInputIntPlusMinusButtonPlus')
+      .should('be.visible')
+      .click({ force: true });
+    cy.get(':nth-child(7) > .extraCounter > .confInputIntPlusMinusContainer > .confInputIntPlusMinusButtonPlus')
+      .should('be.visible')
+      .click({ force: true });
+    cy.get('.extrasInvoice > .configuratorButton')
       .contains('Next step')
       .should('be.visible')
       .click();
