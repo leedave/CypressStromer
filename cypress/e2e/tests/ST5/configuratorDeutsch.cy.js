@@ -56,13 +56,13 @@ describe('Bike Configurator', function () {
 
     //Configure the bike
   
-    cy.get('[for="Rahmengrösse_l0"]', { timeout: 20000 })
+    cy.get('[for="Rahmengrösse_m0"]', { timeout: 20000 })
       .should('be.visible')
       .click();
     cy.get('[for="Federgabel_nf"]')
       .should('be.visible')
       .click();
-    cy.get('[for="Sattelstütze_sa"]')
+    cy.get('[for="Sattelstütze_ns"]')
       .should('be.visible')
       .click();
     cy.get('button')
