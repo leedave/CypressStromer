@@ -59,6 +59,7 @@ describe('Bike Configurator', function () {
     cy.get('[for="Rahmengrösse_m0"]', { timeout: 20000 })
       .should('be.visible')
       .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5aggspm0.jpg');
     cy.get('[for="Federgabel_nf"]')
       .should('be.visible')
       .click();
