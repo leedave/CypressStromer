@@ -65,6 +65,37 @@ describe('Bike Configurator', function () {
     cy.get('[for="Sattelstütze_ns"]')
       .should('be.visible')
       .click();
+    cy.wait(3000);
+    cy.get('[for="Sattelstütze_sa"]')
+      .should('be.visible')
+      .click();
+    cy.get('[for="Sattelstütze_ns"]')
+      .should('be.visible')
+      .click();
+    cy.get('[for="Federgabel_fe"]')
+      .should('be.visible')
+      .click();
+    cy.get('[for="Federgabel_nf"]')
+      .should('be.visible')
+      .click();
+    cy.get('[for="Rahmengrösse_l0"]')
+      .should('be.visible')
+      .click();
+    cy.get('[for="Rahmengrösse_xl"]')
+      .should('be.visible')
+      .click();
+    cy.get('[for="Rahmengrösse_m0"]')
+      .should('be.visible')
+      .click();
+    cy.get('[for="Rahmengrösse_m0"]', { timeout: 20000 })
+      .should('be.visible')
+      .click();
+    cy.get('[for="Federgabel_nf"]')
+      .should('be.visible')
+      .click();
+    cy.get('[for="Sattelstütze_ns"]')
+      .should('be.visible')
+      .click();
     cy.get('button')
       .contains('Next step')
       .should('be.visible')
