@@ -268,7 +268,8 @@ describe('Bike Configurator', function () {
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5aggspxl__fe.jpg');
     cy.wait(3000); 
     
-    // end
+// The end of the options
+
     cy.get('button')
       .contains('Next step')
       .should('be.visible')
@@ -277,7 +278,8 @@ describe('Bike Configurator', function () {
       .contains('Next step')
       .should('be.visible')
       .click();
-    
+ 
+// Testing all the Extras to see if the images are corresponding with the product shown.
 
     cy.get(':nth-child(1) > .extraImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/extra/b983.jpg');
     cy.get(':nth-child(2) > .extraImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/extra/b814.jpg');
