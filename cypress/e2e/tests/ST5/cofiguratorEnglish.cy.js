@@ -50,9 +50,6 @@ describe('Bike Configurator', function () {
       .contains('Configure the ST5 ABS')
       .should('be.visible')
       .click();
-  
-    
-
 
 //Configure the bike
 // Frame size M with 4 options
