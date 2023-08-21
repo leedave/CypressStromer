@@ -8,7 +8,7 @@ describe('Bike Configurator', function () {
       .click();
   });
 
-  //Select a language and country
+//Select a language and country
 
   it('Select language', function ()  {
     cy.get('#block-multiswitcher-2')
@@ -36,7 +36,7 @@ describe('Bike Configurator', function () {
       .click();
   });
 
-  //Select a E-bike
+//Select a ST5 E-bike
 
   it('Your Stromer', function () {
     cy.get('#block-menureferencesbycountry > :nth-child(2) > :nth-child(2) > :nth-child(1)')
@@ -50,13 +50,10 @@ describe('Bike Configurator', function () {
       .contains('Configure the ST5 ABS')
       .should('be.visible')
       .click();
-    
-    
 
-
-    //Configure the bike
-    // Frame size M with 4 options
-    // Option 1 -> 
+//Configure the bike
+// Frame size M with 4 options
+// Option 1 -> 
       
     cy.get('[for="Rahmengrösse_m0"]', { timeout: 20000 })
       .should('be.visible')
@@ -74,7 +71,7 @@ describe('Bike Configurator', function () {
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5aggspm0.jpg');
     cy.wait(3000);
 
-    // Option 2 -> 
+// Option 2 -> 
 
     cy.get('[for="Rahmengrösse_m0"]', { timeout: 20000 })
       .should('be.visible')
@@ -91,7 +88,7 @@ describe('Bike Configurator', function () {
       .click();
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5aggspm0__fesa.jpg');
 
-    //  Option 3 -> 
+//  Option 3 -> 
 
     cy.get('[for="Rahmengrösse_m0"]', { timeout: 20000 })
       .should('be.visible')
@@ -108,7 +105,7 @@ describe('Bike Configurator', function () {
       .click();
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5aggspm0__nfsa.jpg');
 
-    // Option 4 ->
+// Option 4 ->
 
     cy.get('[for="Rahmengrösse_m0"]')
       .should('be.visible')
@@ -126,8 +123,8 @@ describe('Bike Configurator', function () {
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5aggspm0__fe.jpg');
     cy.wait(3000);
 
-    // Frame size L with 4 options
-    // Option 1 -> 
+// Frame size L with 4 options
+// Option 1 -> 
 
     cy.get('[for="Rahmengrösse_l0"]', { timeout: 20000 })
       .should('be.visible')
@@ -145,7 +142,7 @@ describe('Bike Configurator', function () {
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5a.jpg');
     cy.wait(3000);
 
-    // Option 2 -> 
+// Option 2 -> 
 
     cy.get('[for="Rahmengrösse_l0"]', { timeout: 20000 })
       .should('be.visible')
@@ -162,7 +159,7 @@ describe('Bike Configurator', function () {
       .click();
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5aggspl0__fesa.jpg');
 
-    //  Option 3 -> 
+//  Option 3 -> 
 
     cy.get('[for="Rahmengrösse_l0"]', { timeout: 20000 })
       .should('be.visible')
@@ -179,7 +176,7 @@ describe('Bike Configurator', function () {
       .click();
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5aggspl0__nfsa.jpg');
 
-    // Option 4 ->
+// Option 4 ->
 
     cy.get('[for="Rahmengrösse_l0"]')
       .should('be.visible')
@@ -197,8 +194,8 @@ describe('Bike Configurator', function () {
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5aggspl0__fe.jpg');
     cy.wait(3000);
 
-    // Frame size XL with 4 options
-    // Option 1 -> 
+// Frame size XL with 4 options
+// Option 1 -> 
 
     cy.get('[for="Rahmengrösse_xl"]', { timeout: 20000 })
       .should('be.visible')
@@ -216,7 +213,7 @@ describe('Bike Configurator', function () {
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5aggspxl.jpg');
     cy.wait(3000);
 
-    // Option 2 -> 
+// Option 2 -> 
 
     cy.get('[for="Rahmengrösse_xl"]', { timeout: 20000 })
       .should('be.visible')
