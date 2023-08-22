@@ -50,9 +50,7 @@ describe('Bike Configurator', function () {
       .trigger('mouseover')
       .should('be.visible')
       .click();
-  });
-});
- 
+  
 // Configure the bike ST1
 // Frame Color Light Grey
 // 8 Options
@@ -63,3 +61,23 @@ describe('Bike Configurator', function () {
       .should('be.visible')
       .click();
     cy.get('').should('have.prop', 'src', '');
+
+    cy.get('')
+      .should('be.visible')
+      .click();
+    cy.get('').should('have.prop', 'src', '');
+
+    cy.get('')
+      .should('be.visible')
+      .click();
+    cy.get('').should('have.prop', 'src', '');
+
+    cy.get('')
+      .should('be.visible')
+      .click();
+    cy.get('').should('have.prop', 'src', '');
+  });
+});
+
+
+    
