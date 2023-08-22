@@ -52,4 +52,14 @@ describe('Bike Configurator', function () {
       .click();
   });
 });
-  
+ 
+// Configure the bike ST1
+// Frame Color Light Grey
+// 8 Options
+
+// Option 1
+
+    cy.get('')
+      .should('be.visible')
+      .click();
+    cy.get('').should('have.prop', 'src', '');
