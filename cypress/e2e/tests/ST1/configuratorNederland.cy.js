@@ -19,7 +19,7 @@ describe('Bike Configurator', function () {
       .should('be.visible')
       .click();
 
-    cy.get('#aos-locale-multi-switcher-form--2 .custom-js-dropdown-option.custom-js-dropdown-language-option').contains('English')
+    cy.get('#aos-locale-multi-switcher-form--2 .custom-js-dropdown-option.custom-js-dropdown-language-option').contains('Nederlands')
       .should('be.visible')
       .click();
 
@@ -27,7 +27,7 @@ describe('Bike Configurator', function () {
       .should('be.visible')
       .click();
 
-    cy.get('#aos-locale-multi-switcher-form--2 .custom-js-dropdown-option.custom-js-dropdown-country-options').contains('USA')
+    cy.get('#aos-locale-multi-switcher-form--2 .custom-js-dropdown-option.custom-js-dropdown-country-options').contains('Netherlands')
       .should('be.visible')
       .click();
 
